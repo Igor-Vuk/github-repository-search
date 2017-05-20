@@ -1,0 +1,31 @@
+// CSS Variables
+:root {
+  --head: #0275D8;
+}
+
+/* Navigation bar */
+$nav-background: $lightblue;
+$nav-text: $blue;
+
+// To override some of bootstrap elements with high specificity we neste everything inside class container to increase specificity of our classes.
+// If needed we can increase it even more using further nesting or by chaining selector by itself ex. .btn.btn {...}
+
+.container {
+
+  .nav-bar {
+    background-color: $nav-background;
+    font-weight: 500;
+  }
+
+  .nav-text {
+    text-decoration: none;
+    cursor: default;
+    padding-top: 0.5em;
+  }
+
+  .header {
+    color: var(--head);
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}

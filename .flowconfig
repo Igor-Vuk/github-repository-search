@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/fbjs/.*
+
+[include]
+
+[libs]
+
+[options]
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/flow/stub/cssModules.js'
+module.name_mapper='^apiCall\(.*\)$' -> '<PROJECT_ROOT>/src/client/api/apiCall.jsx\1'
+module.name_mapper='^DisplayComponent\(.*\)$' -> '<PROJECT_ROOT>/src/client/scenes/home/components/DisplayComponent.jsx\1'
+module.name_mapper='^SearchComponent\(.*\)$' -> '<PROJECT_ROOT>/src/client/scenes/home/components/SearchComponent.jsx\1'
+module.name_mapper='^Home\(.*\)$' -> '<PROJECT_ROOT>/src/client/scenes/home/index.jsx\1'
+module.name_mapper='^Navigation\(.*\)$' -> '<PROJECT_ROOT>/src/client/scenes/shared/navigation/index.jsx\1'
+module.name_mapper='^Container\(.*\)$' -> '<PROJECT_ROOT>/src/client/scenes/Container.js\1'
