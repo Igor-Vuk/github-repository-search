@@ -19,19 +19,13 @@ class Home extends Component {
     })
   }
 
-  render (): React.Element<any> {
+  render = (): React.Element<any> => {
     const {accountName} = this.state
-
-    const renderDisplay = (): ?React.Element<any> => {
-      if (accountName) {
-        return <DisplayComponent accountName={accountName} />
-      }
-    }
 
     return (
       <div>
         <SearchComponent onSearch={this.handleSearch} />
-        {renderDisplay()}
+        <DisplayComponent accountName={accountName} />
       </div>
     )
   }

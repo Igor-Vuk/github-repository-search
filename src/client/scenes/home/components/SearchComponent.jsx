@@ -19,7 +19,7 @@ class SearchComponent extends Component {
     }
   }
 
-  render (): React.Element<any> {
+  render = (): React.Element<any> => {
     return (
       <div styleName="container" className="container">
         <form onSubmit={this.onFormSubmit}>

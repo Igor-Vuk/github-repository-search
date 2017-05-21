@@ -6,7 +6,7 @@ import {IndexLink} from 'react-router'
 import './index.local.scss'
 
 class Navigation extends Component {
-  render (): React.Element<any> {
+  render = (): React.Element<any> => {
     return (
       <div styleName="container">
         {/* For Demonstration purpose */}
