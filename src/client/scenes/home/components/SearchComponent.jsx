@@ -23,8 +23,12 @@ class SearchComponent extends Component {
     return (
       <div styleName="container" className="container">
         <form onSubmit={this.onFormSubmit}>
-          <input type="search" ref="accountName" placeholder="Enter Github account name" />
-          <button>Search</button>
+          <div className="input-group">
+            <span className="input-group-btn">
+              <button className="btn btn-secondary" type="button">Search</button>
+            </span>
+            <input type="search" ref="accountName" placeholder="Enter account name" className="form-control" />
+          </div>
         </form>
       </div>
     )

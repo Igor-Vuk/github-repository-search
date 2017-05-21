@@ -10,7 +10,7 @@ type StateType = {
 
 class Home extends Component {
   state: StateType = {
-    accountName: undefined
+    accountName: 'undefined'
   }
 
   handleSearch = (accountName: string) => {
@@ -21,7 +21,6 @@ class Home extends Component {
 
   render = (): React.Element<any> => {
     const {accountName} = this.state
-
     return (
       <div>
         <SearchComponent onSearch={this.handleSearch} />

@@ -1,16 +1,20 @@
-// CSS Variables
-:root {
-  --head: #0275D8;
-}
-
 /* Navigation bar */
-$nav-background: $lightblue;
-$nav-text: $blue;
+$nav-background: $lightGray;
+$nav-link: $yellow;
+$nav-text: $white;
 
 // To override some of bootstrap elements with high specificity we neste everything inside class container to increase specificity of our classes.
 // If needed we can increase it even more using further nesting or by chaining selector by itself ex. .btn.btn {...}
 
 .container {
+
+  .project-name {
+    color: $nav-text;
+    &:hover {
+      color: $nav-text;
+      cursor: default;
+    }
+  }
 
   .nav-bar {
     background-color: $nav-background;
@@ -21,11 +25,10 @@ $nav-text: $blue;
     text-decoration: none;
     cursor: default;
     padding-top: 0.5em;
+    color: $nav-text;
   }
 
-  .header {
-    color: var(--head);
-    padding-bottom: 40px;
-    text-align: center;
+  a {
+    color: $nav-link;
   }
 }
