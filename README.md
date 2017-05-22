@@ -2,6 +2,10 @@
 
 ## Search for Github repositories based on account name ##
 
+## Link to Github repository ##
+
+* <https://github.com/Igor-Vuk/github-repository-search>
+
 ## Features ##
 
 * ES6/ES7 ready
@@ -23,8 +27,8 @@
 
 ## Run the app ##
 
-* install `yarn`
-* run `yarn` or `yarn install` to install all npm paskages
+* install `yarn` (or `npm`)
+* run `yarn` or `yarn install` (or `npm install`) to install all npm paskages
 
 * To be able to fetch **email** from users through Github API we need to use `Authorisation`. For the app to work we first need to get **Personal access token** from Github account. To get the token we go to our `Github profile/Settings/Personal access tokens`. We click on `Generate new token`, give him some description and under `Select scopes` we click on `user:email Access user email addresses (read-only)` and `Generate token`.
 

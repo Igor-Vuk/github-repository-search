@@ -7,7 +7,7 @@ const ACCESS_TOKEN: string = conf.GITHUB_ACCESS_TOKEN
 
 const REQUEST: string = 'https://api.github.com/users/'
 
-/* We can not fetch user email without authorisation. We use github Personall access token to do that. Instructions to get Access token are in README.md */
+/* We cannot fetch user email without authorisation. We use github Personal access token to do that. Instructions to get Access token are in README.md */
 var config = {
   headers: {'Authorization': `token ${ACCESS_TOKEN}`}
 }
