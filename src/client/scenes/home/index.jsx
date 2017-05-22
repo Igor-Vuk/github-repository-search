@@ -10,7 +10,7 @@ type StateType = {
 
 class Home extends Component {
   state: StateType = {
-    accountName: 'undefined'
+    accountName: undefined
   }
 
   handleSearch = (accountName: string) => {

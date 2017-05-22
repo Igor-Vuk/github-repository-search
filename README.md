@@ -1,12 +1,8 @@
-# Ultimate React Boilerplate #
+# Github repository search #
 
-## Easy way to start a project ##
+## Search for Github repositories based on account name ##
 
-### I made a custom React boilerplate for everyone to use. I will keep it updated by adding and combining different technologies per your requests. It is meant to be used for a quick setup when starting a new project and easier development workflow ###
-
-For more informations about how some features work, refer to [README_app.md](README_app.md)
-
-## Inital Setup Features that you get by default ##
+## Features ##
 
 * ES6/ES7 ready
 * Babel
@@ -14,8 +10,6 @@ For more informations about how some features work, refer to [README_app.md](REA
 * CSS Modules
 * Flow.js
 * PostCSS, CSS Variables and autoprefixer
-* Test ready (tape, enzyme, sinon)
-* Test coverage (istanbul)
 * Tree Shaking
 * webpack.config (development & production mode)
 * Browsersync
@@ -27,18 +21,32 @@ For more informations about how some features work, refer to [README_app.md](REA
 * yarn.lock
 * .editorconfig
 
-## Help needed with ##
-
-* Combining browsersynic with react-hot-loader and webpack-dev-middleware/webpack-hot-middleware
-
 ## Run the app ##
 
+* install `yarn`
 * run `yarn` or `yarn install` to install all npm paskages
 
-* Make **app.local.json** inside the **conf** folder
-* Copy the settings from **app.json** and change them to your preference
-* If you run the app in **production** mode, settings from **app.json** will be used
-* If you run the app in **development** mode, settings from **app.local.json** will be used
+* To be able to fetch **email** from users through Github API we need to use `Authorisation`. For the app to work we first need to get **Personal access token** from Github account. To get the token we go to our `Github profile/Settings/Personal access tokens`. We click on `Generate new token`, give him some description and under `Select scopes` we click on `user:email Access user email addresses (read-only)` and `Generate token`.
+
+![picture alt](http://i.imgur.com/ry4os72.png "List")
+
+* We get a new token. Copy the token, go back to application and paste it inside `app.json` and `app.local.json` file inside `conf folder` under `GITHUB_ACCESS_TOKEN`
+
+* It should look like this
+
+```json
+{
+  "APP_PORT": 3000,
+  "GITHUB_ACCESS_TOKEN": "7skepblaf1dab4d1f9c51b9101ooeqbnd4e83da4"
+}
+```
+
+**Note** => **If user didn't set email address as public it will not be fetched.**
+
+* **Now we can run the app**
+
+* If we run the app in **production** mode, settings from **app.json** and **webpack.config.babel.js** will be used
+* If we run the app in **development** mode, settings from **app.local.json** and **webpack.config.babel.js** will be used
 
 ### BEFORE PRODUCTION ###
 
@@ -49,7 +57,8 @@ For more informations about how some features work, refer to [README_app.md](REA
 
 * `yarn run build-server`  will bundle server for production using `babel` and make a `build` folder
 * `yarn run build-client` will bundle client for production using `webpack` and make a `dist` folder
-* `yarn run start` set NODE_ENV = production and start the app on port **3001** (build server and client first)
+
+* `yarn run start` sets NODE_ENV = production, runs `build-server` and `build-client` script and starts the app on port **3001**
 
 ### IN DEVELOPMENT ###
 
@@ -59,6 +68,10 @@ For more informations about how some features work, refer to [README_app.md](REA
 ### HELPER SCRIPTS ###
 
 * `yarn run flow` will run flow check
-* `yarn run standard` will run standard.js check
 * `yarn run test` will run all the tests
 * `yarn run coverage` will run test coverage
+
+---
+
+**App picture**
+![picture alt](http://i.imgur.com/AaIHds1.png "List")

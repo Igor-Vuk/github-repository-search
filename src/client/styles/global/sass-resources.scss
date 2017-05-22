@@ -10,10 +10,10 @@ $lightGray: #616465;
 $darkGray: #323232;
 $yellow: #FFC700;
 $white: #FFF;
-$darkerWhite: #ccc;
+$darkerWhite: #f9f9f9;
 
 body {
-  background-color: #f9f9f9
+  background-color: $darkerWhite
 }
 
 @media (min-width: 576px) {

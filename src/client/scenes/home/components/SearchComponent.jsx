@@ -13,9 +13,12 @@ class SearchComponent extends Component {
   onFormSubmit = (e: Object) => {
     e.preventDefault()
     const accountName: string = this.refs.accountName.value
+    /* Regex to match the same style of writing account name on github */
     if (accountName.match(/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i)) {
       this.refs.accountName.value = ''
       this.props.onSearch(accountName)
+    } else {
+      window.alert('Invalid Account name')
     }
   }
 
