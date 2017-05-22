@@ -49,7 +49,7 @@
 
 * **Now we can run the app**
 
-* If we run the app in **production** mode, settings from **app.json** and **webpack.config.babel.js** will be used
+* If we run the app in **production** mode, settings from **app.json** and **webpack.config.prod.babel.js** will be used
 * If we run the app in **development** mode, settings from **app.local.json** and **webpack.config.babel.js** will be used
 
 ### BEFORE PRODUCTION ###
